@@ -7,7 +7,6 @@ body {
       grid-gap: 50px;
       grid-template-columns: 100px 100px 100px;
       background-color: #fff;
-      
       color: #444;
     }
   
@@ -96,7 +95,7 @@ div {
   animation-duration: 4s;
   animation-delay: 4s;
   animation-delay: -2s;
-  Negative values are also allowed. If using negative values, the animation will start as if it had already been playing for N seconds.
+  /*Negative values are also allowed. If using negative values, the animation will start as if it had already been playing for N seconds.*/
   animation-iteration-count: 3;
   /*How many times an animation runs. can also be infinite*/
   animation-direction: reverse;
