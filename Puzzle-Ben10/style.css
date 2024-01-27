@@ -28,7 +28,8 @@
     justify-content: center;
     align-items: center;
 }
-#original-displayer{
+#original-displayer
+{
     display: flex;
     flex-wrap: nowrap;
     border: 5px solid;
@@ -80,7 +81,41 @@
     margin: 5px;
 }
 .Piece:hover {
-    border-width: 2px;
-    border-color: gold;
+    border-width:5px;
+    border-color: rgb(0, 254, 0);
     border-style: solid;
+    z-index: 1;
+}
+.winner
+{
+    position: absolute;
+    top: 25%;
+    animation: scale-win 8s;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background-color: white;
+    z-index: 2;
+}
+#Ben
+{
+    height: 10rem;
+}
+#Winner-text
+{
+    font-size: 10rem;
+    text-align: center;
+    font-family: 'Bungee Spice';
+}
+@keyframes scale-win
+{
+    0% 
+    {
+        width: 0px;
+    }
+    100%{
+        width: 100%;
+    }
 }

@@ -6,9 +6,10 @@ var currTile;
 var otherTile;
 var turns = 0;
 
-var imgOrder = ["4", "2", "8", "5", "1", "6", "7", "9", "3", "10", "11", "12"];
+var imgOrder = ["4", "2", "8", "5", "1", "6", "7", "9", "3", "11", "10", "12"];
 
-window.onload = function() 
+window.onload = reload();
+function reload() 
 {
     for (let r=0; r < rows; r++) 
     {
@@ -68,6 +69,7 @@ function dragEnd()
         let otherImg = otherTile.src;
         currTile.src = otherImg;
         otherTile.src = currImg;
+        turns++;
     }
     checkWinner();
 }
@@ -88,6 +90,25 @@ function checkWinner()
         }   
     }
     if(win)
-    console.log("Winner");
-    else console.log("Loser");
+    {
+        winner_screen();
+        setTimeout(() => {  location.reload(); }, 8000);
+    }
+    else if(turns==20)
+    {
+        losser_screen();
+        setTimeout(() => {  location.reload(); }, 8000);
+    }
+}
+function winner_screen()
+{
+    let div = document.getElementById("run_on_victory");
+    div.classList.add("winner");
+    div.innerHTML = '<img id="Ben" src="Assets/Victory.gif"><p id="Winner-text">Winner</p>';       
+}
+function losser_screen()
+{
+    let div = document.getElementById("run_on_victory");
+    div.classList.add("winner");
+    div.innerHTML = '<img id="Ben" src="Assets/Lose.gif"><p id="Winner-text">Losser</p>';       
 }
