@@ -46,7 +46,7 @@ function dragEnd()
 {
     if (!otherTile.src.includes("PuzzlePieces/4.png"))
     {
-    //    return;
+        return;
     }
     let currCoords = currTile.id.split("-"); //ex) "0-0" -> ["0", "0"]
     let r = parseInt(currCoords[0]);
@@ -63,7 +63,7 @@ function dragEnd()
 
     let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
 
-    //if(isAdjacent) 
+    if(isAdjacent) 
     {
         let currImg = currTile.src;
         let otherImg = otherTile.src;
