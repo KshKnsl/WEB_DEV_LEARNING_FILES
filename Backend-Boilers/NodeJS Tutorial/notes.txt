@@ -1,0 +1,51 @@
+//Terminal commands
+npm init -y --> create a package.json file and initialises init
+npm install --> installs all dependencies
+npm install package-name --> installs particular dependency
+npm install package-name --save-dev --> installs package as a dev dependency
+npm uninstall package-name --> uninstalls package
+npm run start --> runs the start script in package.json
+npm install -g package-name --> installs package globally
+npm list --> lists all dependencies
+npm install -g nodemon --> installs nodemon globally nodemon works to start server automatically whenever a change is made in the file
+npm install express@4.17.1 --> installs a specific version of express
+devDependencies --> dependencies that are only required during development
+npm run script-name --> runs a particular script
+npm start --> runs the start script
+
+//Code
+const fs = require('fs'); --> imports the file system module and to access anything in file system module we use 'fs' variable
+
+fs.writeFileSync('hello.txt', 'Hello from Node.js'); --> creates a file named hello.txt and writes Hello from Node.js in it
+
+// ExpressJS - framework
+the work of app.use() is to use a middleware i.e. a function that has access to the request and response object
+and runs some code and then calls next() to move to the next middleware and also if next middleware is not present then it will move to the request handler routes
+if next() is not called then the request will be stuck and will not move to the next middleware or request handler routes causing server to hang
+
+//EJS --> Embedded JavaScript
+EJS is a templating engine that allows us to embed JavaScript code in HTML files
+express.set('view engine', 'ejs'); --> sets the view engine to ejs
+<% 2+2 %> --> this will not be displayed in the browser but its result will be displayed
+app.use(express.static(path.join(__dirname,'public'))); //hamesha static files search karna ke liya public folder me hi jana padega
+--> this will make the public folder static and all the files in the public folder will be accessible to the browser
+this public folder is going to contains all the static files like css, images, etc for the frontend
+
+to access things database's documents in the ejs file we use render method and pass the data in the second argument  
+then we use <%= %> and to run javascript code we use <% %>
+
+// MongoDB
+mongosh --> starts the mongo server
+
+
+//authentication and authorization
+authentication --> verifying who the user is
+authorization --> verifying what the user can access
+//JWT --> JSON Web Token
+JWT is a standard that defines a way to securely transmit information between parties as a JSON object
+Cookies are used to store the JWT token, they are stored in the browser and are sent to the server with every request
+JWT splits the token into 3 parts header, payload, and signature
+
+//bcrypt
+bcrypt is a password hashing function
+refer the documentation for more details npmjs.com/package/bcrypt
