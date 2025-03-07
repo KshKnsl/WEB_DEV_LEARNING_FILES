@@ -1,0 +1,17 @@
+{
+  "name": "bypass-sophos",
+  "version": "1.0.0",
+  "description": "A package to bypass Sophos using a local proxy and VPN",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "node-cmd": "^5.0.0",
+    "stream": "^0.0.3",
+    "through2": "^4.0.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
