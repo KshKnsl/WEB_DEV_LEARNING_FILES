@@ -1,0 +1,71 @@
+version: 2
+updates:
+  # Backend-Learner
+  - package-ecosystem: "npm"
+    directory: "/Backend-Learner"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  # Backend-Boilers - NodeJS Tutorial
+  - package-ecosystem: "npm"
+    directory: "/Backend-Boilers/NodeJS Tutorial"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  # Backend-Boilers - JWT Tutorial
+  - package-ecosystem: "npm"
+    directory: "/Backend-Boilers/NodeJS Tutorial/JWT-TUTORIAL"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  # Backend-Boilers - Server-side rendering
+  - package-ecosystem: "npm"
+    directory: "/Backend-Boilers/NodeJS Tutorial/server-side rendering"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  # Backend-Boilers - Mongoose tutorial
+  - package-ecosystem: "npm"
+    directory: "/Backend-Boilers/mongoose tutorial"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  # React - 01ReactRouter
+  - package-ecosystem: "npm"
+    directory: "/React/01ReactRouter"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  # URL-Shortener
+  - package-ecosystem: "npm"
+    directory: "/URL-Shortener"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  # WheelBuddy 2.0
+  - package-ecosystem: "npm"
+    directory: "/WheelBuddy 2.0"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  # bypass-sophos
+  - package-ecosystem: "npm"
+    directory: "/bypass-sophos"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  # JS_DEMO
+  - package-ecosystem: "npm"
+    directory: "/JS_DEMO"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
