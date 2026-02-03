@@ -1,0 +1,42 @@
+name: Node CI
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18, 20]
+        directory:
+          - 'Backend-Learner'
+          - 'Backend-Boilers/NodeJS Tutorial'
+          - 'Backend-Boilers/NodeJS Tutorial/JWT-TUTORIAL'
+          - 'Backend-Boilers/NodeJS Tutorial/server-side rendering'
+          - 'Backend-Boilers/mongoose tutorial'
+          - 'React/01ReactRouter'
+          - 'URL-Shortener'
+          - 'WheelBuddy 2.0'
+          - 'bypass-sophos'
+          - 'JS_DEMO'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      
+      - name: Check if package.json exists
+        id: check-package
+        run: |
+          if [ -f "${{ matrix.directory }}/package.json" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Install dependencies
+        if: steps.check-package.outputs.exists == 'true'
+        working-directory: ${{ matrix.directory }}
+        run: npm install
