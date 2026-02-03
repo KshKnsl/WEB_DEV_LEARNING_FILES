@@ -21,12 +21,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      
+
       - name: Check if package.json exists
         id: check-package
         run: |
@@ -35,7 +35,7 @@ jobs:
           else
             echo "exists=false" >> $GITHUB_OUTPUT
           fi
-      
+
       - name: Install dependencies
         if: steps.check-package.outputs.exists == 'true'
         working-directory: ${{ matrix.directory }}
